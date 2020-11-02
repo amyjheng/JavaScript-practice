@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01Date.html</title>
+</head>
+<body>
+    <script>
+        //建立日期物件語法 1
+        let d = new Date();
+        console.log(d);
+
+        //建立日期物件語法 2
+        let d2 = new Date("2020/8/19 ");
+        console.log(d2);
+        d2 = new Date("2020/8/19 11:27:30 am");
+        console.log(d2);
+        d2 = new Date("2020/8/19 11:27:30 pm");
+        console.log(d2);
+        d2 = new Date("2020/8/19 23:27:30 pm");
+        console.log(d2);  //Invalid Date
+
+        //建立日期物件語法 3
+        let d3 = new Date(2020, 7, 19, 11, 27, 30);
+        console.log(d3);
+
+        let theYear = d.getFullYear() - 1911;
+        let theMonth = d.getMonth() + 1;
+        let theDate = d.getDate();
+        //document.write(d);
+        document.write("民國" + theYear + "年" + theMonth + "月" + theDate + "日" + "<br>");
+        //console.log(new Date().getDay());
+
+        let d4 = new Date("2020/6/32");
+        d4 = new Date(2020, 5, 32);
+        d4 = new Date("2019/2/29");
+        console.log(d4);
+    </script>
+</body>
+</html>

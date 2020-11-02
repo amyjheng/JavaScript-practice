@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01getElementContent.html</title>
+</head>
+<body>
+    
+    <div id="myDiv"></div>
+    <script>
+        var myDiv = document.getElementById("myDiv");
+        console.log(myDiv);
+        myDiv.innerHTML = "<h2>FUEN2</h2>";
+        //myDiv.innerHTML = myDiv.innerHTML + "<h2>JavaScript</h2>";
+        myDiv.innerHTML +=  "<h2>JavaScript</h2>";
+    </script>
+</body>
+</html>

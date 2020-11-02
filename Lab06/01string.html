@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01string.html</title>
+</head>
+<body>
+    <div id="info"></div>
+    <script>
+        //6-1:字串的標示方式
+        let price = 200, qty = 100;
+        console.log(`price=${price},qty=${qty}`);
+
+        //6-2: 字串的跳脫表示
+        console.log("\x41\x61\x26");
+        console.log("\u4e00\u4e01");
+        
+
+        //6-3: 字串的常用方法
+        let str2 = "java script";  //字串變數
+        console.log(typeof str2);  //string
+        //字串物件
+        let strObj = new String("Java Scrpt Hello");
+        console.log(typeof strObj);  //object
+        console.log(strObj.length);     
+
+        console.log("strObj.charAt(3)=" + strObj.charAt(3));  //a
+        console.log("strObj.charCodeAt(3)=" + strObj.charCodeAt(3));  //97
+        console.log("strObj.indexOf('a')=" + strObj.indexOf('a'));  //1
+        console.log("strObj.lastIndexOf('a')=" + strObj.lastIndexOf('a'));  //3
+        console.log("strObj.lastIndexOf('@')=" + strObj.lastIndexOf('@'));  //-1
+        console.log("strObj.substr(5,3)=" + strObj.substr(5, 3));  //Scr
+        console.log("strObj.substr(5)=" + strObj.substr(5));  //Scrpt Hello
+        console.log("strObj.substring(5,8)=" + strObj.substring(5, 8));//Scr
+        console.log("strObj.split(' ',2)=" + strObj.split(' ', 2));  //Java,Scrpt,Hello
+        let ary = strObj.split(' ', 2);
+        console.log(ary);
+        console.log("strObj.toUpperCase()=" + strObj.toUpperCase());       
+
+
+        let strObj2 = new String("一二三");
+        let ch = strObj2.charCodeAt(0);
+        console.log(ch);  //19968  0x4e00
+        if (ch >= 0x4e00 && ch <= 0x9fff)
+            console.log(true);
+        else
+            console.log(false)
+
+    </script>
+</body>
+</html>

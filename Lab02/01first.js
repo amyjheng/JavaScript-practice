@@ -1,0 +1,1 @@
+﻿document.write("FUEN2<br>JavaScript");
